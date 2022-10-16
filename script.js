@@ -138,6 +138,13 @@ const BresenhamCircle = function (r, h, k) {
 
   while (x <= y) {
     draw(x + h, y + k);
+    draw(x + h, -y + k);
+    draw(-x + h, -y + k);
+    draw(-x + h, y + k);
+    draw(y + h, x + k);
+    draw(y + h, -x + k);
+    draw(-y + h, -x + k);
+    draw(-y + h, x + k);
     if (d < 0) d = d + 4 * x + 6;
     else {
       d = d + 4 * (x - y) + 10;
