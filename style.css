@@ -156,8 +156,21 @@ a {
 }
 
 @media (max-width: 800px) {
+  html {
+    font-size: 14px;
+  }
   .container {
     flex-direction: column;
     gap: 2em;
+    align-items: center;
+  }
+
+  .main--container {
+    width: 90%;
+    margin-right: 0;
+  }
+
+  .canvas--container {
+    max-width: 300px;
   }
 }
