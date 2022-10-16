@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CG Algorithms</title>
+    <link rel="stylesheet" href="style.css" /> 
+  <body>
+    <script defer src="script.js"></script>
+    <!-- <script defer src="script.js"></script> -->
+    <div class="container">
+      <div class="main--container">
+        <p class="title">
+          Computer<br />Graphics<br />
+          Algorithm
+        </p>
+        <div class="form--container">
+          <select class="select" name="" id="select-algo">
+            <option value="dda-line" selected>DDA Line</option>
+            <option value="bresenham-line">Bresenham's Line</option>
+            <option value="bresenham-circle">Bresenham's Circle</option>
+          </select>
+
+          <form action="" class="four-input-form">
+            <input class="field" id="x1" type="text" placeholder="X1" />
+            <input class="field" id="y1" type="text" placeholder="Y1" />
+          </form>
+          <form class="four-input-form">
+            <input class="field" id="x2" type="text" placeholder="X2" />
+            <input class="field" id="y2" type="text" placeholder="Y2" />
+          </form>
+          <form id="two-input-form">
+            <input class="field" id="h" type="text" placeholder="center:x" />
+            <input class="field" id="k" type="text" placeholder="center:y" />
+          </form>
+          <form action="" id="radius-input-form">
+            <input type="text" name="" id="radius" placeholder="Radius" class="field">
+          </form>
+        </div>
+        <button class="btn">DRAW</button>
+      </div>
+      <div class="canvas--container">
+        <div class="canvas"></div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p id="copyright">
+        All right reserved@2022
+        <span id="authorName"
+          ><a
+            target="_blank"
+            href="https://www.facebook.com/abcde.fghijklmnopqrstuvwxyzlll/"
+            >Raihan Uddin</a
+          ></span
+        >
+      </p>
+    </footer>
+  </body>
+</html>

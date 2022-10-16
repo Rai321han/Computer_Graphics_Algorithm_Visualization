@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 3em;
+}
+.container {
+  /* height: 95vh; */
+  margin-top: 5em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.canvas--container {
+  overflow: auto;
+  max-height: 600px;
+  max-width: 600px;
+  cursor: grab;
+}
+.canvas {
+  overflow: auto;
+  background-color: orange;
+  /* width: 500px;
+  height: 400px; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.level {
+  color: white;
+  font-size: 0.6rem;
+}
+
+.Animation {
+  animation: colorAnimation 2s ease-out 2s;
+}
+
+.title {
+  font-size: 3rem;
+  margin-right: 1em;
+}
+
+.select {
+  padding: 0.8em 1em;
+  outline: none;
+  border: 0.1px solid grey;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1em;
+  color: rgb(218, 218, 218);
+  background-color: black;
+}
+
+@keyframes colorAnimation {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: red;
+  }
+}
+
+.form--container {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  height: 30px;
+  width: 100%;
+  font-size: 1rem;
+  padding: 1em;
+  text-align: center;
+}
+
+.field::placeholder {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1;
+}
+
+form {
+  font-size: 2rem;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.btn {
+  background-color: lightgrey;
+  margin-top: 1em;
+  padding: 1em;
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: grey;
+}
+
+.main--container {
+  width: 20%;
+  margin-right: 5em;
+}
+
+.footer {
+  height: 5vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#two-input-form {
+  display: none;
+}
+
+#radius-input-form {
+  display: none;
+}
+
+#copyright,
+#authorName {
+  color: grey;
+  font-size: 1rem;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: crimson;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    gap: 2em;
+  }
+}
