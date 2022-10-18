@@ -66,6 +66,7 @@ body {
   margin-bottom: 1em;
   color: rgb(218, 218, 218);
   background-color: black;
+  letter-spacing: 1.2px;
 }
 
 @keyframes colorAnimation {

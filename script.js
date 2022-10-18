@@ -154,6 +154,33 @@ const BresenhamCircle = function (r, h, k) {
   }
 };
 
+////
+////
+//////////--------Midpoint Circle--------///////////
+const MidpointCircle = function (r, h, k) {
+  let p = 1 - r;
+  let x = 0;
+  let y = r;
+
+  makeCanvas(h + r, k + r);
+  while (x <= y) {
+    draw(x + h, y + k);
+    draw(x + h, -y + k);
+    draw(-x + h, -y + k);
+    draw(-x + h, y + k);
+    draw(y + h, x + k);
+    draw(y + h, -x + k);
+    draw(-y + h, -x + k);
+    draw(-y + h, x + k);
+    if (p < 0) p = 2 * x + 3;
+    else {
+      p = p + 2 * (x - y) + 5;
+      y--;
+    }
+    x++;
+  }
+};
+
 ///
 ////
 /////////---------APP DRAW BUTTON-----///////////////
@@ -187,6 +214,12 @@ drawButton.addEventListener("click", function () {
     twoInputValidation(h, k)
   )
     BresenhamCircle(R, H, K);
+  else if (
+    algo === "midpoint-circle" &&
+    oneInputValidation(radius) &&
+    twoInputValidation(h, k)
+  )
+    MidpointCircle(R, H, K);
   else return;
 });
 
@@ -208,7 +241,10 @@ select.addEventListener("change", () => {
   document.getElementById("h").value = "";
   document.getElementById("k").value = "";
 
-  if (select.value === "bresenham-circle") {
+  if (
+    select.value === "bresenham-circle" ||
+    select.value === "midpoint-circle"
+  ) {
     fourInputForm.forEach((form) => {
       form.style.display = "none";
     });
