@@ -5,6 +5,10 @@
 3. Bresenham's Circle Drawing
 4. Midpoint Circle Drawing
 
-## LIVE
+## Limitations
+
+Value above 300 may slow down the page😓
+
+## Live
 
 https://neon-selkie-fe4a17.netlify.app/
